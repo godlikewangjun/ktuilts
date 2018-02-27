@@ -15,13 +15,14 @@
  */
 
 @file:Suppress("unused")
-package com.sre.almighty.tools.ktutils
+package com.wj.ktutils
 
 import android.app.Activity
 import android.app.Fragment
 import android.content.Context
 import android.os.Handler
 import android.os.Looper
+import com.sre.almighty.tools.ktutils.AnkoContext
 import java.lang.ref.WeakReference
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
