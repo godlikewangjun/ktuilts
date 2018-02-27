@@ -1,2 +1,2 @@
 # ktuilts
-kotlin for utils
+kotlin for android-utils
