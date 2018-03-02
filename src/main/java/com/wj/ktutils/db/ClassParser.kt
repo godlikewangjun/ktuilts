@@ -15,8 +15,10 @@
  */
 
 @file:Suppress("unused")
-package com.ad.aituo.db
+package com.wj.ktutils.db
 
+import com.sre.almighty.tools.ktutils.AnkoException
+import com.wj.ktutils.db.JavaSqliteUtils.PRIMITIVES_TO_WRAPPERS
 import java.lang.reflect.Modifier
 
 @Target(AnnotationTarget.CONSTRUCTOR)

@@ -15,10 +15,11 @@
  */
 
 @file:Suppress("unused")
-package com.ad.aituo.db
+package com.wj.ktutils.db
 
 import android.database.Cursor
 import android.database.sqlite.SQLiteException
+import com.sre.almighty.tools.ktutils.AnkoInternals
 import java.util.*
 
 interface RowParser<out T> {

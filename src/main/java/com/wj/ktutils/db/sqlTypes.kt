@@ -15,7 +15,7 @@
  */
 
 @file:Suppress("unused")
-package com.ad.aituo.db
+package com.wj.ktutils.db
 
 interface SqlType {
     val name: String
