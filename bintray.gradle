@@ -46,7 +46,7 @@ bintray {
     pkg {
         //填入 bintray 上对应的 package 信息
         repo = 'wjAndBase'
-        name = 'ktutils'
+        name = 'ktlibrary'
         vcsUrl = 'https://github.com/godlikewangjun/WjAnBase.git'
         websiteUrl = 'https://github.com/godlikewangjun/WjAnBase'
         licenses = ['Apache-2.0']

@@ -29,11 +29,11 @@ class HttpRequests {
     var ohhttpparams: OhHttpParams? = null
     var classType: Class<*>? = null
 
-    internal var success: (Any) -> Unit = { }
-    internal var fail: (Int, String?, Throwable?) -> Unit = { _: Int, _: String?, _: Throwable? -> }
-    internal var finsh: () -> Unit = {}
-    internal var start: () -> Unit = {}
-    internal var listener: OhObjectListener<*>?=null
+    var success: (Any) -> Unit = { }
+    var fail: (Int, String?, Throwable?) -> Unit = { _: Int, _: String?, _: Throwable? -> }
+    var finsh: () -> Unit = {}
+    var start: () -> Unit = {}
+    var listener: OhObjectListener<*>? = null
 
 
 }
@@ -53,13 +53,13 @@ class HttpFile {
     var requestType: String? = null
     var ohhttpparams: OhHttpParams? = null
     var upFile: List<File>? = null
-    internal var success: (Any) -> Unit = { }
-    internal var fail: (s: String, s1: String) -> Unit = { _: String, _: String? -> }
-    internal var finsh: () -> Unit = {}
-    internal var start: () -> Unit = {}
-    internal var error: (e: Exception) -> Unit = {}
-    internal var progress: (l: Long, l1: Long, b: Boolean) -> Unit = { _: Long, _: Long, _: Boolean? -> }
-    internal var listener: OhFileCallBakListener?=null
+    var success: (Any) -> Unit = { }
+    var fail: (s: String, s1: String) -> Unit = { _: String, _: String? -> }
+    var finsh: () -> Unit = {}
+    var start: () -> Unit = {}
+    var error: (e: Exception) -> Unit = {}
+    var progress: (l: Long, l1: Long, b: Boolean) -> Unit = { _: Long, _: Long, _: Boolean? -> }
+    var listener: OhFileCallBakListener? = null
 }
 
 /**
@@ -99,7 +99,7 @@ private fun httpDU(wrap: HttpFile) {
      * 重写代表 单独的回调不能使用，只能在重写方法里面调用
      */
     val httplistener: OhFileCallBakListener
-    if(wrap.listener==null){
+    if (wrap.listener == null) {
         httplistener = object : OhFileCallBakListener() {
             override fun onStart() {
                 wrap.start()
@@ -118,20 +118,20 @@ private fun httpDU(wrap: HttpFile) {
             }
 
             override fun onFinish() {
-                wrap. finsh()
+                wrap.finsh()
             }
 
             override fun onRequestProgress(l: Long, l1: Long, b: Boolean) {
-                wrap. progress(l, l1, b)
+                wrap.progress(l, l1, b)
             }
         }
-    }else{
-        httplistener= wrap.listener!!
+    } else {
+        httplistener = wrap.listener!!
     }
 
     when (wrap.requestType) {
         HttpFile.DOWN -> http.downFile(wrap.context, wrap.url, httplistener)
-        HttpFile.UPLOAD ->http.upFiles(wrap.url, wrap.ohhttpparams, wrap.upFile, httplistener)
+        HttpFile.UPLOAD -> http.upFiles(wrap.url, wrap.ohhttpparams, wrap.upFile, httplistener)
     }
 }
 
@@ -149,7 +149,7 @@ private fun executeForResult(wrap: HttpRequests) {
      * 重写代表 单独的回调不能使用，只能在重写方法里面调用
      */
     val httplistener: OhObjectListener<*>
-    if(wrap.listener==null){
+    if (wrap.listener == null) {
         httplistener = object : OhObjectListener<String>() {
             override fun onSuccess(p0: String?) {
                 if (wrap.classType == null) wrap.success(p0!!) else wrap.success(JSON.parseObject(p0!!, wrap.classType))
@@ -167,8 +167,8 @@ private fun executeForResult(wrap: HttpRequests) {
                 wrap.start()
             }
         }
-    }else{
-        httplistener= wrap.listener!!
+    } else {
+        httplistener = wrap.listener!!
     }
     when (wrap.requestType) {
         HttpRequests.GET -> http.get(wrap.url, httplistener)
