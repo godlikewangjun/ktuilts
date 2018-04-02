@@ -19,7 +19,7 @@ package com.wj.ktutils.db
 
 import android.database.Cursor
 import android.database.sqlite.SQLiteException
-import com.sre.almighty.tools.ktutils.AnkoInternals
+import com.wj.ktutils.AnkoInternals
 import java.util.*
 
 interface RowParser<out T> {

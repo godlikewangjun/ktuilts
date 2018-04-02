@@ -25,6 +25,8 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.support.v4.app.Fragment
+import com.wj.ktutils.AnkoContext
+import com.wj.ktutils.AnkoInternals
 
 
 inline fun <reified T: Activity> Context.startActivity(vararg params: Pair<String, Any?>) =

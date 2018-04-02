@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.sre.almighty.tools.ktutils.collections
+package com.wj.ktutils.collections
 
 
 import android.util.SparseArray

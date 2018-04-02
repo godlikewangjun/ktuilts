@@ -15,7 +15,7 @@
  */
 
 @file:Suppress("unused", "NOTHING_TO_INLINE")
-package com.sre.almighty.tools.ktutils.collections
+package com.wj.ktutils.collections
 
 /**
  * Iterate the receiver [List] using an index.

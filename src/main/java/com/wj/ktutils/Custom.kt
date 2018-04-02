@@ -15,7 +15,7 @@
  */
 
 @file:Suppress("unused")
-package com.sre.almighty.tools.ktutils
+package com.wj.ktutils
 
 import android.app.Activity
 import android.content.Context

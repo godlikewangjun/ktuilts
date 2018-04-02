@@ -18,7 +18,6 @@
 package com.wj.ktutils
 
 import android.view.View
-import com.sre.almighty.tools.ktutils.AnkoInternals
 
 @DslMarker
 @Target(AnnotationTarget.TYPE)

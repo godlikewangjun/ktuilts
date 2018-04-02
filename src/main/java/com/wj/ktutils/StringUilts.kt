@@ -3,7 +3,9 @@
 @file:kotlin.jvm.JvmName("WjStringsKt")
 package com.wj.ktutils
 
+import android.content.Context
 import com.abase.util.AbStrUtil
+import com.abase.util.Tools
 
 /**
  * String扩展方法
@@ -19,3 +21,6 @@ inline fun CharSequence?.isPhoneNum(): Boolean =
 
 inline fun CharSequence?.isEmail(): Boolean =
         AbStrUtil.isEmail(this.toString())
+
+inline fun Context?.showTip(string: String) =
+       Tools.showTip(this,string)

@@ -15,7 +15,7 @@
  */
 
 @file:Suppress("unused")
-package com.sre.almighty.tools.ktutils
+package com.wj.ktutils
 
 import android.app.Activity
 import android.app.Fragment
@@ -24,7 +24,7 @@ import android.content.ContextWrapper
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewManager
-import com.sre.almighty.tools.ktutils.AnkoInternals.createAnkoContext
+import com.wj.ktutils.AnkoInternals.createAnkoContext
 
 @DslMarker
 private annotation class AnkoContextDslMarker

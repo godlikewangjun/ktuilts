@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.sre.almighty.tools.ktutils
+package com.wj.ktutils
 
 import android.app.Activity
 import android.app.Service
@@ -32,6 +32,10 @@ import android.view.ContextThemeWrapper
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewManager
+import com.sre.almighty.tools.ktutils.AnkoException
+import com.sre.almighty.tools.ktutils.Orientation
+import com.sre.almighty.tools.ktutils.ScreenSize
+import com.sre.almighty.tools.ktutils.UiMode
 import java.io.Serializable
 import java.util.*
 
